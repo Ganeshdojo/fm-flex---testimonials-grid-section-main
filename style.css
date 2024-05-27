@@ -1,0 +1,149 @@
+:root{
+
+    /* primary colors */
+    --clr-primary-violet: hsl(263, 55%, 52%);
+    --clr-primary-grayish-blue: hsl(217, 19%, 35%);
+    --clr-primary-blackish-blue: hsl(219, 29%, 14%);
+    --clr-primary-white: hsl(0, 0%, 100%);
+
+    /* neutral colors */
+    --clr-neutral-gray: hsl(0, 0%, 81%);
+    --clr-neutral-grayish-blue: hsl(210, 46%, 95%);
+
+    --fsize: 0.813rem;
+    --fw-500: 500;
+    --fw-600: 600;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body{
+    background-color: var(--clr-neutral-grayish-blue);
+}
+
+.flex-container{
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 5rem;
+}
+
+.box .profile-flex-wrapper{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.box{
+    border-radius: 8px;
+    padding: 30px 20px;
+    margin-bottom: 1.5rem;
+    color: var(--clr-primary-white);
+    box-shadow: 10px 10px 20px 0px var(--clr-neutral-gray);
+}
+
+.box .profile{
+    border-radius: 50%;
+    border:2px solid var(--clr-primary-white);
+    width: 40px;
+    height: 40px;
+}
+
+.box .profile.profile-reverse{
+    border: 2px solid var(--clr-primary-blackish-blue);
+}
+.box p{
+    opacity: 50%;
+    font-weight: var(--fw-500);
+}
+
+.box .name{
+    opacity: 70%;
+    font-weight: var(--fw-600);
+}
+
+.box .text-inactive{
+    opacity: 50%;
+}
+
+.box h3{
+    font-weight: var(--fw-600);
+    width: 90%;
+    line-height: 25px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.box1 .quotation{
+    position: absolute;
+    right: 10%;
+    top: 0;
+}
+
+.box.box1 > * :not(.quotation){
+    z-index: 100;
+}
+
+.box.box1{
+    background-color: var(--clr-primary-violet);
+    position: relative;
+}
+
+.box.box2{
+    background-color: var(--clr-primary-grayish-blue);
+}
+
+.box.box3,
+.box.box5{
+    background-color: var(--clr-primary-white);
+    color: var(--clr-primary-blackish-blue);
+}
+
+.box.box4{
+    background-color: var(--clr-primary-blackish-blue);
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+    margin-bottom: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* media queries */
+@media only screen and (min-width: 1024px) {
+
+    .flex-container{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .left-container{
+        flex-basis: 85%;
+    }
+    
+    .right-container{
+        flex-basis: 25%;
+    }
+    .left-container .top-container{
+        display: flex;
+        gap: 2rem;
+        flex-basis: 50%;
+    }
+    
+    .left-container .bottom-container{
+        display: flex;
+        gap: 2rem;
+        flex-basis: 50%;
+    }
+}
